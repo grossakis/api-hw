@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifGen</title>
-    <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>GIFS for Cartoons</h1>
+        <br>
+        <nav>
+            <div id="buttons-div"></div>
+            <br>
+            <form id="cartoon-form">
+                <label id="search-label" for="cartoon-input">Search for a cartoon</label>
+                <input type="text" id="cartoon-input"><br><br>
+                <!-- This button will trigger our AJAX call -->
+                <input id="find-cartoon" type="submit" value="Add Cartoon">
+            </form>
+        </nav>
     </header>
+    
     <div id="main-content">
-        <div id="buttons-div"></div>
-        <form id="cartoon-form">
-            <label for="cartoon-input">Search for a cartoon</label>
-            <input type="text" id="cartoon-input"><br>
-            <!-- This button will trigger our AJAX call -->
-            <input id="find-cartoon" type="submit" value="Cartoon Search">
-        </form>
-        <div id="gif-display"></div>
+        <div id="gif-display">
+            <h2>Click a Button to Generate GIFs</h2>
+        </div>
     </div>
+    <footer>
+        GIFs Courtesy of GIPHY
+    </footer>
     <script type="text/javascript" src="assets/javascript/giphy-api.js"></script>
 </body>
 
